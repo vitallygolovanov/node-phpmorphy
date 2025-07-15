@@ -2,7 +2,7 @@
   "name": "phpmorphy",
   "version": "2.3.2",
   "scripts": {
-    "clean": "rm -rf dist && mkdir dist",
+    "clean": "rimraf dist && mkdir dist",
     "babel": "babel src --out-dir dist --copy-files --source-maps",
     "babel:watch": "run-s \"babel -- --watch --verbose\"",
     "watch": "run-s clean babel:watch",
@@ -51,6 +51,7 @@
     "eslint-plugin-sonarjs": "^0.5.0",
     "eslint-plugin-unicorn": "^17.2.0",
     "prettier": "^1.19.1",
+    "rimraf": "^6.0.1",
     "source-map-support": "^0.5.16"
   },
   "keywords": [
