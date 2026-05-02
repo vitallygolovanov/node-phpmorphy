@@ -2,7 +2,7 @@
   "name": "phpmorphy",
   "version": "2.3.2",
   "scripts": {
-    "clean": "rimraf dist && mkdir dist",
+    "clean": "node -e \"const fs=require('fs'); fs.rmSync('dist',{recursive:true,force:true}); fs.mkdirSync('dist',{recursive:true});\"",
     "babel": "babel src --out-dir dist --copy-files --source-maps",
     "babel:watch": "run-s \"babel -- --watch --verbose\"",
     "watch": "run-s clean babel:watch",
@@ -47,7 +47,6 @@
     "eslint-plugin-sonarjs": "^3.0.4",
     "eslint-plugin-unicorn": "^60.0.0",
     "prettier": "^3.6.2",
-    "rimraf": "^6.0.1",
     "source-map-support": "^0.5.21"
   },
   "keywords": [
